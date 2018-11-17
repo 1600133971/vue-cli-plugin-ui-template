@@ -1,0 +1,16 @@
+{
+  "name": "{{name}}",
+  "description": "{{description}}",
+  "author": "{{author}}",
+  "version": "{{version}}",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1600133971/{{name}}.git"
+  },
+  "homepage": "https://github.com/1600133971/{{name}}#readme",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
+}

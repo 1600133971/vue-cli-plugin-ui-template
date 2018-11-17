@@ -1,0 +1,35 @@
+{
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "message": "Project name",
+      "default": "vue-cli-plugin-demo"
+    },
+    "cmd": {
+      "type": "string",
+      "required": true,
+      "message": "Command",
+      "default": "cmd"
+    },
+    "version": {
+      "type": "string",
+      "required": true,
+      "message": "Version",
+      "default": "0.1.0"
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "message": "Project description",
+      "default": "A Vue-CLI 3.x project"
+    },
+    "author": {
+      "type": "string",
+      "required": false,
+      "message": "Author",
+      "default": ""
+    }
+  },
+  "completeMessage": "please wait:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm i\n  npm run serve"
+}

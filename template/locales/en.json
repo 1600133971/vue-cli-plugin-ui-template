@@ -1,0 +1,35 @@
+{
+  "org": {
+    "vue": {
+      "st": {
+        "{{cmd}}": {
+          "config": {
+            "description": "Configure options of {{cmd}}",
+            "tab1": {
+              "label": "General"
+            },
+            "tab2": {
+              "label": "Options"
+            }
+          },
+          "tasks": {
+            "description": "Compile and testing with {{cmd}}",
+            "group": {
+              "general": "General Options",
+              "recommended": "Recommended Options",
+              "secondary": "Secondary Options",
+              "network": "Network Options",
+              "debug": "Debug Options"
+            },
+            "mode": {
+              "description": "Specify env mode"
+            },
+            "custom": {
+              "description": "Specify custom {{cmd}} conf file(conf selects 'custom' option)"
+            }
+          }
+        }
+      }
+    }
+  }
+}
