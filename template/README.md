@@ -1,6 +1,6 @@
 # ☕️ {{name}}
 
-> {{cmd}} plugin(ui) for vue-cli 3.x
+> {{cmd}} plugin(ui) for vue-cli 4.x
 
 This adds unit testing support using [{{cmd}}](http://template-runner.github.io/latest/index.html).
 

@@ -4,7 +4,7 @@
       "type": "string",
       "required": true,
       "message": "Project name",
-      "default": "vue-cli-plugin-demo"
+      "default": "vue-cli-plugin-ui-demo"
     },
     "cmd": {
       "type": "string",
@@ -16,13 +16,13 @@
       "type": "string",
       "required": true,
       "message": "Version",
-      "default": "0.1.0"
+      "default": "0.0.1"
     },
     "description": {
       "type": "string",
       "required": false,
       "message": "Project description",
-      "default": "A Vue-CLI 3.x project"
+      "default": "A Vue-CLI UI 4.x project"
     },
     "author": {
       "type": "string",
