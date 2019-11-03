@@ -6,6 +6,12 @@
       "message": "Project name",
       "default": "vue-cli-plugin-ui-demo"
     },
+    "namespace": {
+      "type": "string",
+      "required": true,
+      "message": "Project name space",
+      "default": "custom"
+    },
     "cmd": {
       "type": "string",
       "required": true,

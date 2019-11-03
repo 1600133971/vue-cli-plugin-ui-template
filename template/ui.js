@@ -6,7 +6,7 @@ module.exports = api => {
     removeSharedData,
     watchSharedData,
     unwatchSharedData
-  } = api.namespace('org.vue.st.{{cmd}}.addon.');
+  } = api.namespace('org.vue.st.{{namespace}}.addon.');
 
   function addQuotes(text) {
     return '\\\"' + (text) + '\\\"';
@@ -23,9 +23,9 @@ module.exports = api => {
   }
 
   api.describeConfig({
-    id: 'org.vue.st.template.configuration',
+    id: 'org.vue.st.{{namespace}}.configuration',
     name: 'template',
-    description: 'org.vue.st.template.config.description',
+    description: 'org.vue.st.{{namespace}}.config.description',
     link: 'https://github.com/1600133971/{{name}}',
     files: {
       // eslintrc.js
@@ -44,7 +44,7 @@ module.exports = api => {
       tabs: [
         {
           id: 'tab1',
-          label: 'org.vue.st.template.config.tab1.label',
+          label: 'org.vue.st.{{namespace}}.config.tab1.label',
           icon: 'settings',
           prompts: [
             // 提示符对象们
@@ -52,7 +52,7 @@ module.exports = api => {
         },
         {
           id: 'tab2',
-          label: 'org.vue.st.template.config.tab2.label',
+          label: 'org.vue.st.{{namespace}}.config.tab2.label',
           icon: 'settings_applications',
           prompts: [
             // 提示符对象们
@@ -67,7 +67,7 @@ module.exports = api => {
 
   api.describeTask({
     match: /vue-cli-service {{cmd}}/,
-    description: 'org.vue.st.template.tasks.description',
+    description: 'org.vue.st.{{namespace}}.tasks.description',
     link: 'https://github.com/1600133971/{{name}}#injected-commands',
     prompts: [
       {
@@ -89,15 +89,15 @@ module.exports = api => {
           }
         ],
         message: '--mode',
-        description: 'org.vue.st.{{cmd}}.tasks.mode.description',
-        group: 'org.vue.st.{{cmd}}.tasks.group.general'
+        description: 'org.vue.st.{{namespace}}.tasks.mode.description',
+        group: 'org.vue.st.{{namespace}}.tasks.group.general'
       },
       {
         name: 'custom',
         type: 'input',
         default: '',
-        description: 'org.vue.st.{{cmd}}.tasks.custom.description',
-        group: 'org.vue.st.{{cmd}}.tasks.group.recommended'
+        description: 'org.vue.st.{{namespace}}.tasks.custom.description',
+        group: 'org.vue.st.{{namespace}}.tasks.group.recommended'
       }
     ],
     // 钩子
@@ -161,20 +161,20 @@ module.exports = api => {
     // 默认情况下，这里是展示终端输出的 `output` 视图
     /*views: [
       {
-        id: 'org.vue.st.karma.client-addon',
-        label: 'org.vue.st.karma.tasks.views.label',
+        id: 'org.vue.st.{{namespace}}.client-addon',
+        label: 'org.vue.st.{{namespace}}.tasks.views.label',
         icon: 'dashboard',
-        component: 'org.vue.st.karma.components.statistics'
+        component: 'org.vue.st.{{namespace}}.components.statistics'
       }
     ],*/
     // 展示任务详情时默认选择的视图 (默认是 `output`)
-    //defaultView: 'org.vue.st.karma.client-addon'
+    //defaultView: 'org.vue.st.{{namespace}}.client-addon'
   })
 
   /*api.addClientAddon({
-    id: 'org.vue.st.karma.client-addon',
+    id: 'org.vue.st.{{namespace}}.client-addon',
     // 包含构建出来的 JS 文件的文件夹
-    path: 'vue-cli-addon-ui-karma/dist'
+    path: 'vue-cli-addon-ui-{{namespace}}/dist'
     //url: 'http://localhost:8042/index.js'
   })*/
 
